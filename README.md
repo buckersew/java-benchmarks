@@ -5,3 +5,4 @@ Uses JMH to run the benchmarks
 
 - InterfaceBenchmark - how interface implementations in a VM affect the ability of the VM to inline and hence performance
 - OverriddenBenchmark - how overriding affects VM performance and inability to inline
+- ByteBufferBenchmark - relative performance of different bytebuffer setups
