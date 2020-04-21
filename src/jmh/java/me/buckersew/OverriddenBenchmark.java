@@ -19,4 +19,14 @@ public class OverriddenBenchmark {
         blackhole.consume(one.process(45));
         blackhole.consume(two.process(45));
     }
+
+    @Benchmark
+    public void benchmarkThreeImplementations(Blackhole blackhole) {
+        Processor one = new Processor1();
+        Processor two = new Processor1SubClass1();
+        Processor three = new Processor1SubClass2();
+        blackhole.consume(one.process(45));
+        blackhole.consume(two.process(45));
+        blackhole.consume(three.process(45));
+    }
 }
